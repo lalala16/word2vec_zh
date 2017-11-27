@@ -7,7 +7,7 @@ origin_path = os.path.split(os.path.abspath(os.path.dirname(__file__)))[0]
 
 print('Load Sentences...')
 cut_dir = origin_path+'/cut_data/'
-sentences = LineSentence(cut_dir+'data_small.txt')
+sentences = LineSentence(cut_dir+'data_small.csv')
 
 print('Initial Model...')
 model = Word2Vec(min_count=30, size=200)
