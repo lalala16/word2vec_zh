@@ -10,14 +10,7 @@ cut_dir = origin_path+'/word2vec_zh/cut_data/'
 sentences = LineSentence(cut_dir+'data_small.csv')
 
 print('Initial Model...')
-model = Word2Vec(min_count=30, size=200)
-
-print('Build Vocab...')
-model.build_vocab(sentences)
-
-for i in range(1):
-	print('Train model, Step ', i)
-	model.train(sentences)
+model = Word2Vec(sentences, min_count=30, size=200, workers=4)
 
 model.save('my.model')
 
