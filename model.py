@@ -9,6 +9,8 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 origin_path = os.path.split(os.path.abspath(os.path.dirname(__file__)))[0]
+
+
 def w(model, target):
 	try:
 		tup = model.similar_by_word(target)
@@ -32,9 +34,10 @@ def testt_embedding(target):
     model = Word2Vec.load(cut_dir+'my.model')
     w(model, target)
     print model[target]
+    print target in model
 
 
 if __name__ == '__main__':
     train_embedding()
-    testt_embedding(u'爱情')
+    testt_embedding(u'全套')
 
