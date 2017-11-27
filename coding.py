@@ -6,7 +6,7 @@ pure_dir = 'data/'
 files = os.listdir(raw_dir)
 
 for afile in files:
-	if afile[0] == '.' || afile=='readme.md':
+	if afile[0] == '.' or afile=='readme.md':
 		continue
 	in_file = open(raw_dir+afile, encoding='gb18030')
 	out_file = open(pure_dir+afile, 'w', encoding='utf-8')

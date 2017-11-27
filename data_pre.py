@@ -66,7 +66,7 @@ if __name__ == '__main__':
 	files = os.listdir(data_dir)	
 
 	for afile in files:
-		if afile[0] == '.' || afile =='readme.md':
+		if afile[0] == '.' or afile =='readme.md':
 			continue
 		print('Preprocessing...:', afile)
 		preprocess(data_dir+afile, cut_data_dir + 'cut.txt')
