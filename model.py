@@ -7,7 +7,7 @@ import os
 print('Load Sentences...')
 cut_dir = 'cut_data/'
 files_name = os.listdir(cut_dir)
-sentences = LineSentence(cut_dir+'cut.txt')
+sentences = LineSentence(cut_dir+'data_small.txt')
 
 print('Initial Model...')
 model = Word2Vec(min_count=30, size=200)
